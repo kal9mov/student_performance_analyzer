@@ -24,9 +24,9 @@ def sample_data():
 def test_calculate_average_scores(sample_data):
     analyzer = StudentAnalyzer()
     analyzer.data = sample_data
-    
+
     averages = analyzer.calculate_average_scores()
-    
+
     assert averages['math_score'] == pytest.approx(76.666, 0.01)
     assert averages['science_score'] == pytest.approx(78.333, 0.01)
 
@@ -34,10 +34,10 @@ def test_calculate_average_scores(sample_data):
 def test_identify_at_risk_students(sample_data):
     analyzer = StudentAnalyzer()
     analyzer.data = sample_data
-    
+
     # Bob has average (60+55)/2 = 57.5
     at_risk = analyzer.identify_at_risk_students(threshold=60)
-    
+
     assert len(at_risk) == 1
     assert at_risk.iloc[0]['name'] == 'Bob'
     assert at_risk.iloc[0]['average_score'] == 57.5

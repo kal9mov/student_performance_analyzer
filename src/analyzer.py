@@ -21,7 +21,7 @@ class StudentAnalyzer:
         """Calculates average scores for each subject."""
         if self.data is None:
             return None
-        
+
         subjects = [col for col in self.data.columns if 'score' in col]
         return self.data[subjects].mean()
 
@@ -32,7 +32,7 @@ class StudentAnalyzer:
 
         subjects = [col for col in self.data.columns if 'score' in col]
         self.data['average_score'] = self.data[subjects].mean(axis=1)
-        
+
         at_risk = self.data[self.data['average_score'] < threshold]
         return at_risk[[
             'student_id', 'name', 'average_score', 'attendance_rate'

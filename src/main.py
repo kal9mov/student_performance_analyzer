@@ -12,7 +12,7 @@ def main():
 
     # Initialize analyzer
     analyzer = StudentAnalyzer()
-    
+
     # Load data
     print(f"Loading data from {data_path}...")
     if not analyzer.load_data(data_path):

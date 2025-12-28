@@ -17,7 +17,7 @@ def plot_score_distribution(df, output_path):
     plt.xlabel('Average Score')
     plt.ylabel('Number of Students')
     plt.grid(axis='y', alpha=0.75)
-    
+
     try:
         plt.savefig(output_path)
         print(f"Plot saved to {output_path}")

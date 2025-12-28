@@ -107,4 +107,4 @@ Done.
 
 **Visualization:**
 
-*(The generated plot would appear here)*
+![Score Distribution](data/score_distribution.png)

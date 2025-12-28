@@ -1,5 +1,7 @@
 # Student Performance Analyzer
 
+![CI Status](https://github.com/kal9mov/student_performance_analyzer/actions/workflows/ci.yml/badge.svg)
+
 A Python tool to analyze student grades, identify at-risk students, and visualize score distributions. This project demonstrates modern DevOps practices including CI/CD, automated testing, and linting.
 
 ## 🚀 Features
